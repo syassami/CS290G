@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4ACF57D173EF3DD002E1EC6 /* libCS290GECC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ACF57C173EF3D5002E1EC6 /* libCS290GECC.a */; };
 		D4BB5BC1173C90E60012B8AA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB5BC0173C90E60012B8AA /* GameKit.framework */; };
 		D4DABF78173CB4470072AC8F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DABF77173CB4470072AC8F /* AudioToolbox.framework */; };
 		D4DABFA7173CB4630072AC8F /* JSBubbleMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DABF7B173CB4630072AC8F /* JSBubbleMessageCell.m */; };
@@ -63,6 +64,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D4ACF579173EF3D5002E1EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4ACDBFC173EDC55002E1EC6;
+			remoteInfo = CS290GECC.framework;
+		};
+		D4ACF57B173EF3D5002E1EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D4ACDC21173EE0A8002E1EC6;
+			remoteInfo = libCS290GECC.a;
+		};
+		D4ACF584173EF5A7002E1EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D4ACDC20173EE0A8002E1EC6;
+			remoteInfo = libCS290GECC.a;
+		};
 		D4EEEB9A173B669F00489703 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4EEEB64173B669F00489703 /* Project object */;
@@ -73,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CS290GECC.xcodeproj; path = ../CS290GECC/CS290GECC.xcodeproj; sourceTree = "<group>"; };
 		D4BB5BC0173C90E60012B8AA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		D4DABF77173CB4470072AC8F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D4DABF7A173CB4630072AC8F /* JSBubbleMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBubbleMessageCell.h; sourceTree = "<group>"; };
@@ -149,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4ACF57D173EF3DD002E1EC6 /* libCS290GECC.a in Frameworks */,
 				D4DABF78173CB4470072AC8F /* AudioToolbox.framework in Frameworks */,
 				D4BB5BC1173C90E60012B8AA /* GameKit.framework in Frameworks */,
 				D4EEEB70173B669F00489703 /* UIKit.framework in Frameworks */,
@@ -170,6 +194,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4ACF574173EF3D4002E1EC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4ACF57A173EF3D5002E1EC6 /* CS290GECC.framework */,
+				D4ACF57C173EF3D5002E1EC6 /* libCS290GECC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D4DABF79173CB4630072AC8F /* JSMessagesTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +279,7 @@
 		D4EEEB63173B669F00489703 = {
 			isa = PBXGroup;
 			children = (
+				D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */,
 				D4EEEB75173B669F00489703 /* CS290GChat */,
 				D4EEEB9C173B669F00489703 /* CS290GChatTests */,
 				D4EEEB6E173B669F00489703 /* Frameworks */,
@@ -339,6 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D4ACF585173EF5A7002E1EC6 /* PBXTargetDependency */,
 			);
 			name = CS290GChat;
 			productName = CS290GChat;
@@ -383,6 +418,12 @@
 			mainGroup = D4EEEB63173B669F00489703;
 			productRefGroup = D4EEEB6D173B669F00489703 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D4ACF574173EF3D4002E1EC6 /* Products */;
+					ProjectRef = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4EEEB6B173B669F00489703 /* CS290GChat */,
@@ -390,6 +431,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D4ACF57A173EF3D5002E1EC6 /* CS290GECC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CS290GECC.framework;
+			remoteRef = D4ACF579173EF3D5002E1EC6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4ACF57C173EF3D5002E1EC6 /* libCS290GECC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCS290GECC.a;
+			remoteRef = D4ACF57B173EF3D5002E1EC6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4EEEB6A173B669F00489703 /* Resources */ = {
@@ -487,6 +545,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D4ACF585173EF5A7002E1EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libCS290GECC.a;
+			targetProxy = D4ACF584173EF5A7002E1EC6 /* PBXContainerItemProxy */;
+		};
 		D4EEEB9B173B669F00489703 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4EEEB6B173B669F00489703 /* CS290GChat */;

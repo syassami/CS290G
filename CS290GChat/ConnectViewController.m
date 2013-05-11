@@ -8,6 +8,7 @@
 
 #import "ConnectViewController.h"
 #import "ChatViewController.h"
+#import <CS290GECC/CS290GECC.h>
 
 @interface ConnectViewController ()
 
@@ -42,6 +43,7 @@
     peerPicker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
     chatPeers = [[NSMutableArray alloc] init];
     disconnectTriggeredBack = NO;
+    [CSLog log];
 }
 
 - (void)didReceiveMemoryWarning
