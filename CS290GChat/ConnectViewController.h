@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
 
-@interface ConnectViewController : UIViewController <GKSessionDelegate, GKPeerPickerControllerDelegate, UITextFieldDelegate>{
+@interface ConnectViewController : UIViewController <GKSessionDelegate, GKPeerPickerControllerDelegate>{
     GKSession *chatSession;
     GKPeerPickerController *peerPicker;
     NSMutableArray *chatPeers;

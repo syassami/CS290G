@@ -43,7 +43,7 @@
     peerPicker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
     chatPeers = [[NSMutableArray alloc] init];
     disconnectTriggeredBack = NO;
-    [CSLog log];
+    [ECC testMain];
 }
 
 - (void)didReceiveMemoryWarning

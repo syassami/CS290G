@@ -656,6 +656,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CS290GChat/CS290GChat-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../CS290GECC/Library/openssl/openssl/include";
 				INFOPLIST_FILE = "CS290GChat/CS290GChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -667,6 +668,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CS290GChat/CS290GChat-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../CS290GECC/Library/openssl/openssl/include";
 				INFOPLIST_FILE = "CS290GChat/CS290GChat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
