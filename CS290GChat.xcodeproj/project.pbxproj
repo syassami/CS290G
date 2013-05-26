@@ -658,6 +658,10 @@
 				GCC_PREFIX_HEADER = "CS290GChat/CS290GChat-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../CS290GECC/Library/openssl/openssl/include";
 				INFOPLIST_FILE = "CS290GChat/CS290GChat-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CS290GChat-gnyyinfamkcrpodbbacnbihsqlbl/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -670,6 +674,10 @@
 				GCC_PREFIX_HEADER = "CS290GChat/CS290GChat-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../CS290GECC/Library/openssl/openssl/include";
 				INFOPLIST_FILE = "CS290GChat/CS290GChat-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CS290GChat-gnyyinfamkcrpodbbacnbihsqlbl/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

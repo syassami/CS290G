@@ -22,17 +22,26 @@
                                     <action selector="connect:" destination="2" eventType="touchUpInside" id="4XB-VD-CUd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Establishing connection..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vap-QB-2J1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7q4-dc-OUh" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="PtH-o2-xkq"/>
-                            <constraint firstItem="7q4-dc-OUh" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="iof-ZQ-1OA"/>
+                            <constraint firstItem="vap-QB-2J1" firstAttribute="baseline" secondItem="7q4-dc-OUh" secondAttribute="baseline" type="default" id="3Uq-Fp-pVp"/>
+                            <constraint firstItem="7q4-dc-OUh" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="ANp-vv-xQL"/>
+                            <constraint firstItem="vap-QB-2J1" firstAttribute="centerX" secondItem="7q4-dc-OUh" secondAttribute="centerX" type="default" id="enq-bg-mVU"/>
+                            <constraint firstItem="vap-QB-2J1" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="gW5-m2-8HL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0eq-ot-5d5">
                         <barButtonItem key="backBarButtonItem" title="Disconnect" id="4fs-zg-uik"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="connectButton" destination="7q4-dc-OUh" id="6So-IO-hXd"/>
+                        <outlet property="connectingLabel" destination="vap-QB-2J1" id="OqH-Hn-bwS"/>
                         <segue destination="NSw-xI-3HH" kind="push" identifier="connectedSegue" id="LVt-nK-1pg"/>
                     </connections>
                 </viewController>
@@ -89,6 +98,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ConnectViewController.h"/>
             <relationships>
                 <relationship kind="action" name="connect:"/>
+                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="connectingLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="JSMessagesViewController" superclassName="UIViewController">

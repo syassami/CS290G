@@ -8,16 +8,29 @@
 
 #import <UIKit/UIKit.h>
 #import <GameKit/GameKit.h>
+#import <CS290GECC/CS290GECC.h>
 
 @interface ConnectViewController : UIViewController <GKSessionDelegate, GKPeerPickerControllerDelegate>{
     GKSession *chatSession;
     GKPeerPickerController *peerPicker;
     NSMutableArray *chatPeers;
-    BOOL disconnectTriggeredBack;
+    BOOL __haveReceivedPublicPoint;
+    BOOL __isReady;
+    BOOL __otherPeerIsReady;
+    ECC *__curve;
+    BigPoint *__receivedPublicPoint;
 }
 - (IBAction)connect:(id)sender;
 
 @property (retain) GKSession *chatSession;
+@property (nonatomic, retain) ECC *curve;
+@property (atomic, retain) BigPoint* receivedPublicPoint;
+@property (atomic,assign) BOOL haveReceivedPublicPoint;
+@property (atomic,assign) BOOL isReady;
+@property (atomic,assign) BOOL otherPeerIsReady;
+
+@property (weak, nonatomic) IBOutlet UIButton *connectButton;
+@property (weak, nonatomic) IBOutlet UILabel *connectingLabel;
 
 
 @end
