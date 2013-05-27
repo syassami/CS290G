@@ -11,20 +11,15 @@
 #import <CS290GECC/CS290GECC.h>
 
 @interface ConnectViewController : UIViewController <GKSessionDelegate, GKPeerPickerControllerDelegate>{
-    GKSession *chatSession;
-    GKPeerPickerController *peerPicker;
-    NSMutableArray *chatPeers;
-    BOOL __haveReceivedPublicPoint;
-    BOOL __isReady;
-    BOOL __otherPeerIsReady;
-    ECC *__curve;
-    BigPoint *__receivedPublicPoint;
 }
+
 - (IBAction)connect:(id)sender;
 
-@property (retain) GKSession *chatSession;
-@property (nonatomic, retain) ECC *curve;
-@property (atomic, retain) BigPoint* receivedPublicPoint;
+@property (nonatomic,strong) GKSession *chatSession;
+@property (nonatomic,strong) GKPeerPickerController *peerPicker;
+@property (nonatomic,strong) NSMutableArray *chatPeers;
+@property (nonatomic,strong) ECC *curve;
+@property (atomic,strong) BigPoint* receivedPublicPoint;
 @property (atomic,assign) BOOL haveReceivedPublicPoint;
 @property (atomic,assign) BOOL isReady;
 @property (atomic,assign) BOOL otherPeerIsReady;

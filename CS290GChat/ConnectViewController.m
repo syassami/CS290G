@@ -14,25 +14,18 @@
 @end
 
 @implementation ConnectViewController
-@synthesize chatSession;
-@synthesize curve = __curve;
-@synthesize haveReceivedPublicPoint = __haveReceivedPublicPoint;
-@synthesize otherPeerIsReady = __otherPeerIsReady;
-@synthesize isReady = __isReady;
-@synthesize receivedPublicPoint = __receivedPublicPoint;
-
 - (void) prepareForSegue:(UIStoryboardSegue *)segue
                   sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"connectedSegue"]){
         ChatViewController *chat = (ChatViewController *) segue.destinationViewController;
-        chatSession.delegate=chat;
+        self.chatSession.delegate=chat;
         chat.chatSession = self.chatSession;
-        [chatSession setDataReceiveHandler:chat withContext:nil];
-        if([chatPeers count] == 1){
-            chat.peer = [chatPeers objectAtIndex:0];
-        } else if ([chatPeers count] > 1){
-            NSLog(@"Chat peers was larger than expected (%lu)",(unsigned long)[chatPeers count]);
+        [self.chatSession setDataReceiveHandler:chat withContext:nil];
+        if([self.chatPeers count] == 1){
+            chat.peer = [self.chatPeers objectAtIndex:0];
+        } else if ([self.chatPeers count] > 1){
+            NSLog(@"Chat peers was larger than expected (%lu)",(unsigned long)[self.chatPeers count]);
         } else{
             NSLog(@"Chat peers was empty.");
         }
@@ -44,10 +37,10 @@
     [super viewDidLoad];
     NSLog(@"View did load.");
 	// Do any additional setup after loading the view, typically from a nib.
-    peerPicker = [[GKPeerPickerController alloc] init];
-    peerPicker.delegate = self;
-    peerPicker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
-    chatPeers = [[NSMutableArray alloc] init];
+    self.peerPicker = [[GKPeerPickerController alloc] init];
+    self.peerPicker.delegate = self;
+    self.peerPicker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
+    self.chatPeers = [[NSMutableArray alloc] init];
     [self connectingLabel].hidden=YES;
     [self setHaveReceivedPublicPoint:NO];
     [self setOtherPeerIsReady:NO];
@@ -64,7 +57,7 @@
 
 - (IBAction)connect:(id)sender
 {
-    [peerPicker show];
+    [self.peerPicker show];
 }
 
 - (void) checkEncryption:(NSTimer *) timer
@@ -161,7 +154,7 @@
     if(![self haveReceivedPublicPoint])
     {
         [self setHaveReceivedPublicPoint:YES];
-        [[self receivedPublicPoint] setToMpiNSData:data];
+        [self.receivedPublicPoint copyFromMpiNSData:data];
         [[self curve] makeSharedSecretFromPublicPoint:[self receivedPublicPoint]];
         //Send empty data to tell peer we are ready.
         //TODO: Make this use the encrypted channel to say we are ready!
@@ -196,7 +189,7 @@
             break;
         case GKPeerStateConnected:
             NSLog(@"%@: didStateChange: peer %@ connected (%@)",NSStringFromClass([self class]),[session displayNameForPeer:peerID],peerID);
-            [chatPeers addObject:peerID];
+            [self.chatPeers addObject:peerID];
             [session setDataReceiveHandler:self withContext:nil];
             [self connectButton].hidden = YES;
             [self connectingLabel].hidden = NO;
