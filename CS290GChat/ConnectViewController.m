@@ -21,6 +21,7 @@
         ChatViewController *chat = (ChatViewController *) segue.destinationViewController;
         self.chatSession.delegate=chat;
         chat.chatSession = self.chatSession;
+        chat.password = [self.curve.sharedSecret getXCoordinateHexString];
         [self.chatSession setDataReceiveHandler:chat withContext:nil];
         if([self.chatPeers count] == 1){
             chat.peer = [self.chatPeers objectAtIndex:0];

@@ -8,6 +8,10 @@
 
 #import "JSMessagesViewController.h"
 #import <GameKit/GameKit.h>
+#import <CS290GECC/CS290GECC.h>
+#import <RNCryptor/RNEncryptor.h>
+#import <RNCryptor/RNDecryptor.h>
+
 
 @interface ChatViewController : JSMessagesViewController <GKPeerPickerControllerDelegate,GKSessionDelegate,JSMessagesViewDelegate,JSMessagesViewDataSource>{
     GKSession *chatSession;
@@ -20,5 +24,6 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *naviItem;
 @property (retain) GKSession *chatSession;
 @property (retain) NSString *peer;
+@property (nonatomic, strong) NSString *password;
 
 @end

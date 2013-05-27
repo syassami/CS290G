@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4A7DBBB1753FFF20031D95E /* libRNCryptor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A7DBAF1753FF7F0031D95E /* libRNCryptor.a */; };
+		D4A7DBC8175409840031D95E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A7DBC7175409840031D95E /* Security.framework */; };
 		D4ACF57D173EF3DD002E1EC6 /* libCS290GECC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4ACF57C173EF3D5002E1EC6 /* libCS290GECC.a */; };
 		D4BB5BC1173C90E60012B8AA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BB5BC0173C90E60012B8AA /* GameKit.framework */; };
 		D4DABF78173CB4470072AC8F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DABF77173CB4470072AC8F /* AudioToolbox.framework */; };
@@ -64,6 +66,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D4A7DBAE1753FF7F0031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB7564F01512D3C4007B806B;
+			remoteInfo = RNCryptor;
+		};
+		D4A7DBB01753FF7F0031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB13427A15E0FC2300456914;
+			remoteInfo = "RNCryptor OS X";
+		};
+		D4A7DBB21753FF7F0031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB7565001512D3C4007B806B;
+			remoteInfo = RNCryptorTests;
+		};
+		D4A7DBB41753FF7F0031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FBF7D58C167E5031004B6F0F;
+			remoteInfo = RNCryptorVectors;
+		};
+		D4A7DBB61753FF7F0031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB6AC68C16F6704100CA0C0A;
+			remoteInfo = rncrypt;
+		};
+		D4A7DBBC175404110031D95E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FB7564EF1512D3C4007B806B;
+			remoteInfo = RNCryptor;
+		};
 		D4ACF579173EF3D5002E1EC6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
@@ -95,6 +139,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCryptor.xcodeproj; path = ../RNCryptor/RNCryptor.xcodeproj; sourceTree = "<group>"; };
+		D4A7DBC7175409840031D95E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CS290GECC.xcodeproj; path = ../CS290GECC/CS290GECC.xcodeproj; sourceTree = "<group>"; };
 		D4BB5BC0173C90E60012B8AA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		D4DABF77173CB4470072AC8F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -172,6 +218,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A7DBC8175409840031D95E /* Security.framework in Frameworks */,
+				D4A7DBBB1753FFF20031D95E /* libRNCryptor.a in Frameworks */,
 				D4ACF57D173EF3DD002E1EC6 /* libCS290GECC.a in Frameworks */,
 				D4DABF78173CB4470072AC8F /* AudioToolbox.framework in Frameworks */,
 				D4BB5BC1173C90E60012B8AA /* GameKit.framework in Frameworks */,
@@ -194,6 +242,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4A7DBA61753FF7E0031D95E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4A7DBAF1753FF7F0031D95E /* libRNCryptor.a */,
+				D4A7DBB11753FF7F0031D95E /* RNCryptor.framework */,
+				D4A7DBB31753FF7F0031D95E /* RNCryptorTests.octest */,
+				D4A7DBB51753FF7F0031D95E /* RNCryptorVectors */,
+				D4A7DBB71753FF7F0031D95E /* rncrypt */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D4ACF574173EF3D4002E1EC6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +339,7 @@
 		D4EEEB63173B669F00489703 = {
 			isa = PBXGroup;
 			children = (
+				D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */,
 				D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */,
 				D4EEEB75173B669F00489703 /* CS290GChat */,
 				D4EEEB9C173B669F00489703 /* CS290GChatTests */,
@@ -299,6 +360,7 @@
 		D4EEEB6E173B669F00489703 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4A7DBC7175409840031D95E /* Security.framework */,
 				D4DABF77173CB4470072AC8F /* AudioToolbox.framework */,
 				D4BB5BC0173C90E60012B8AA /* GameKit.framework */,
 				D4EEEB6F173B669F00489703 /* UIKit.framework */,
@@ -373,6 +435,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D4A7DBBD175404110031D95E /* PBXTargetDependency */,
 				D4ACF585173EF5A7002E1EC6 /* PBXTargetDependency */,
 			);
 			name = CS290GChat;
@@ -423,6 +486,10 @@
 					ProductGroup = D4ACF574173EF3D4002E1EC6 /* Products */;
 					ProjectRef = D4ACF573173EF3D4002E1EC6 /* CS290GECC.xcodeproj */;
 				},
+				{
+					ProductGroup = D4A7DBA61753FF7E0031D95E /* Products */;
+					ProjectRef = D4A7DBA51753FF7E0031D95E /* RNCryptor.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -433,6 +500,41 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		D4A7DBAF1753FF7F0031D95E /* libRNCryptor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCryptor.a;
+			remoteRef = D4A7DBAE1753FF7F0031D95E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4A7DBB11753FF7F0031D95E /* RNCryptor.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RNCryptor.framework;
+			remoteRef = D4A7DBB01753FF7F0031D95E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4A7DBB31753FF7F0031D95E /* RNCryptorTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RNCryptorTests.octest;
+			remoteRef = D4A7DBB21753FF7F0031D95E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4A7DBB51753FF7F0031D95E /* RNCryptorVectors */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = RNCryptorVectors;
+			remoteRef = D4A7DBB41753FF7F0031D95E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4A7DBB71753FF7F0031D95E /* rncrypt */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = rncrypt;
+			remoteRef = D4A7DBB61753FF7F0031D95E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D4ACF57A173EF3D5002E1EC6 /* CS290GECC.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -545,6 +647,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D4A7DBBD175404110031D95E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RNCryptor;
+			targetProxy = D4A7DBBC175404110031D95E /* PBXContainerItemProxy */;
+		};
 		D4ACF585173EF5A7002E1EC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libCS290GECC.a;

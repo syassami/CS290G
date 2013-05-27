@@ -60,7 +60,8 @@
     [self.timestamps addObject:[NSDate date]];
     [self.sender addObject:[NSNumber numberWithBool:NO]];
     [JSMessageSoundEffect playMessageSentSound];
-    [chatSession sendDataToAllPeers:[text dataUsingEncoding:NSASCIIStringEncoding] withDataMode:GKSendDataReliable error:nil];
+    
+    [chatSession sendDataToAllPeers:[RNEncryptor encryptData:[text dataUsingEncoding:NSASCIIStringEncoding] withSettings:kRNCryptorAES256Settings password:self.password error:nil] withDataMode:GKSendDataReliable error:nil];
     [self finishSend];
 }
 
@@ -98,7 +99,7 @@
 {
     NSLog(@"Received data in ChatView");
 	//Convert received NSData to NSString to display
-   	NSString *whatDidIget = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+   	NSString *whatDidIget = [[NSString alloc] initWithData:[RNDecryptor decryptData:data withPassword:self.password error:nil] encoding:NSASCIIStringEncoding];
     [self.messages addObject:whatDidIget];
     [self.timestamps addObject:[NSDate date]];
     [self.sender addObject:[NSNumber numberWithBool:YES]];
