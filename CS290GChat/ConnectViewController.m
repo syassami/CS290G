@@ -8,6 +8,7 @@
 
 #import "ConnectViewController.h"
 #import "ChatViewController.h"
+#import <Security/Security.h>
 
 @interface ConnectViewController ()
 
@@ -47,7 +48,9 @@
     [self setOtherPeerIsReady:NO];
     [self setIsReady:NO];
     [self setReceivedPublicPoint:[[BigPoint alloc]init]];
-    [self setCurve:[[ECC alloc] init]];
+    uint8_t data[32];
+    SecRandomCopyBytes(kSecRandomDefault, 32, data);
+    [self setCurve:[[ECC alloc] initWithRandomSeed:data withLength:32]];
 }
 
 - (void)didReceiveMemoryWarning

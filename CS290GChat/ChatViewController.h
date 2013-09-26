@@ -13,7 +13,7 @@
 #import <RNCryptor/RNDecryptor.h>
 
 
-@interface ChatViewController : JSMessagesViewController <GKPeerPickerControllerDelegate,GKSessionDelegate,JSMessagesViewDelegate,JSMessagesViewDataSource>{
+@interface ChatViewController : JSMessagesViewController <GKSessionDelegate,JSMessagesViewDelegate,JSMessagesViewDataSource>{
     GKSession *chatSession;
     NSString *peer;
     
